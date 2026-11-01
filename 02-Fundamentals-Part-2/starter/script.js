@@ -64,3 +64,5 @@ friends[40]='jay'
 console.log(friends)
 console.log(jonas);
 console.log(friends.indexOf('mickey'))
+const jonass=new Array('1','2');
+console.log(jonass)
