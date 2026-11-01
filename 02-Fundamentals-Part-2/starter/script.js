@@ -39,7 +39,7 @@ function fact(n)
     return fact(n-1)*n}
 const p=fact(5)
 console.log(p);
-*/
+
 //array
 const friends=['nick','mike'];
 const jonas=['jonas','schmedman',2037-1991,'teacher',friends];
@@ -66,3 +66,27 @@ console.log(jonas);
 console.log(friends.indexOf('mickey'))
 const jonass=new Array('1','2');
 console.log(jonass)
+*/
+//objects
+const jonas ={firstname:'jonas', 
+               lastname:'schmedtman',
+               birthyear:1991,
+               job:'teacher',
+               friends:['micheal','peter','nick'],
+               haddriverlicense:true,
+               //calcage:function (birthyear)
+                       // {return 2037-birthyear;}
+                calcage:function ()
+                       {this.age= 2037-this.birthyear;
+                        return this.age
+                       },
+                 getsummary:function(){
+                     return `${this.firstname} is a ${this.calcage()} ${this.job}`;
+                }
+
+};
+console.log(jonas.calcage());
+//console.log(jonas.calcage(1993));
+console.log(jonas.getsummary())
+
+
